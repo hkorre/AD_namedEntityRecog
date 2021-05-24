@@ -14,8 +14,15 @@ RUN apt-get install -y \
 #RUN conda install -y \
 #          python=3.5.0
 
+# Optiocal Character Recognition libraries
 RUN pip install \
-       treelib
+       Pillow \
+       pytesseract \
+       pdf2image
+
+# Named Entity  Recognition libraries
+RUN pip install \
+       spacy
 
 #RUN conda install -y \
 #          -c https://conda.anaconda.org/menpo opencv3
