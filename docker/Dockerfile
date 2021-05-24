@@ -14,6 +14,9 @@ RUN apt-get install -y \
 #RUN conda install -y \
 #          python=3.5.0
 
+RUN pip install \
+       pandas
+
 # Optiocal Character Recognition libraries
 RUN pip install \
        Pillow \
@@ -22,7 +25,7 @@ RUN pip install \
 
 # Named Entity  Recognition libraries
 RUN pip install \
-       spacy
+       spacy==2.3.1
 
 #RUN conda install -y \
 #          -c https://conda.anaconda.org/menpo opencv3
