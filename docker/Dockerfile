@@ -2,7 +2,7 @@ FROM continuumio/anaconda3:latest
 
 
 ### custom installs ###################################
-RUN apt-get update
+RUN apt-get update --fix-missing
 
 # Helper libraries
 RUN apt-get install -y \
@@ -16,6 +16,10 @@ RUN apt-get install -y \
 
 RUN pip install \
        pandas
+
+# Needed for pdf2image
+RUN apt-get install -y --fix-missing \
+       poppler-utils
 
 # Optiocal Character Recognition libraries
 RUN pip install \
