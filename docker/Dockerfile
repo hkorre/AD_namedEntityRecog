@@ -18,8 +18,14 @@ RUN pip install \
        pandas
 
 # Needed for pdf2image
-RUN apt-get install -y --fix-missing \
+RUN apt-get install -y \
        poppler-utils
+
+# Needed for pytesseract
+RUN apt-get install -y \
+       libleptonica-dev \
+       tesseract-ocr \
+       libtesseract-dev
 
 # Optiocal Character Recognition libraries
 RUN pip install \
