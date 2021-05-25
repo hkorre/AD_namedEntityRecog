@@ -37,6 +37,9 @@ RUN pip install \
 RUN pip install \
        spacy==2.3.1
 
+RUN pip install \
+       datefinder
+
 #RUN conda install -y \
 #          -c https://conda.anaconda.org/menpo opencv3
 #
